@@ -10,14 +10,14 @@ function validate() {
     var nameRegex = /^[A-Z][a-z]+$/;
     var surnameRegex = /^[A-Z][a-z]+([ -][A-Z][a-z]+)?$/;
     var loginRegex = /^.{5,}$/;
-    var passwordRegex = /^.{5,}$/;
+    var passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[-_!@#$%^&*()+=\[\]{};:,.?]).{5,}$/;
     var emailRegex = /^[\w\.-]+@[\w\.-]+\.[A-Za-z0-9]{2,3}$/;
 
     var result = true;
     var infoResult = "";
 
     if(!nameRegex.test(name.value)) {
-        infoResult = infoResult + "Złe imie <br>";
+        infoResult = infoResult + "Złe imię, proszę używać dużych liter <br>";
         name.style.background = "#fcc2c2";
         result = false;
     } else {
@@ -25,7 +25,7 @@ function validate() {
     }
 
     if(!surnameRegex.test(surname.value)) {
-        infoResult = infoResult + "Złe nazwisko <br>";
+        infoResult = infoResult + "Złe nazwisko, proszę używać dużych liter <br>";
         surname.style.background = "#fcc2c2";
         result = false;
     } else {
@@ -33,7 +33,7 @@ function validate() {
     }
 
     if(!emailRegex.test(email.value)) {
-        infoResult = infoResult + "Zły email <br>";
+        infoResult = infoResult + "Niepoprawny adres e-mail <br>";
         email.style.background = "#fcc2c2";
         result = false;
     } else {
@@ -41,7 +41,7 @@ function validate() {
     }
 
     if(!loginRegex.test(login.value)) {
-        infoResult = infoResult + "Zły login <br>";
+        infoResult = infoResult + "Zły login, minimum 5 znaków <br>";
         login.style.background = "#fcc2c2";
         result = false;
     } else {
@@ -49,7 +49,7 @@ function validate() {
     }
 
     if(!passwordRegex.test(password.value)) {
-        infoResult = infoResult + "Złe hasło <br>";
+        infoResult = infoResult + "Złe hasło, minimum 5 znaków, jedna duża litera, cyfra i znak specjalny <br>";
         password.style.background = "#fcc2c2";
         result = false;
     } else {
@@ -62,7 +62,7 @@ function validate() {
         password2.style.background = "#fcc2c2";
         result = false;
     } else if(!passwordRegex.test(password2.value)) {
-        infoResult = infoResult + "Złe hasło2 <br>";
+        infoResult = infoResult + "Żle powtórzone hasło <br>";
         password2.style.background = "#fcc2c2";
         result = false;
     } else {

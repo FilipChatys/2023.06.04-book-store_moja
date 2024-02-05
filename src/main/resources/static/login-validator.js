@@ -10,7 +10,7 @@ function validate() {
     var infoResult = "";
 
     if(!loginRegex.test(login.value)) {
-        infoResult = infoResult + "Zły login <br>";
+        infoResult = infoResult + "Niepoprawny login <br>";
         login.style.background = "#fcc2c2";
         result = false;
     } else {
@@ -18,7 +18,7 @@ function validate() {
     }
 
     if(!passwordRegex.test(password.value)) {
-        infoResult = infoResult + "Złe hasło <br>";
+        infoResult = infoResult + "Niepoprawne hasło <br>";
         password.style.background = "#fcc2c2";
         result = false;
     } else {

@@ -23,6 +23,7 @@
   <a th:if="${logged}" href="/cart" class="button">Koszyk</a>
   <a th:if="${logged}" href="/order" class="button">Zamówienia</a>
   <a th:if="${!logged}" href="/login" class="button">Zaloguj</a>
+    <a th:if="${!logged}" href="/register" class="button">Zarejestruj</a>
   <a th:if="${logged}" href="/logout" class="button">Wyloguj</a>
 </div>
 

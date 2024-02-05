@@ -18,9 +18,9 @@
         <div th:text="'Cena: ' + ${book.price} + ' zł'" class="price"></div>
         <div th:text="'Ilość: ' + ${book.quantity}" class="quantity"></div>
         <div th:text="'ISBN: ' + ${book.isbn}" class="isbn"></div>
-        <a th:if="${admin}" th:href="@{/book/update/{id}(id=${book.id})}" class="update">Update</a>
-        <a th:if="${admin}" th:href="@{/book/delete/{id}(id=${book.id})}" class="delete">Delete</a>
-        <a th:if="${logged}" th:href="@{/cart/add/{id}(id=${book.id})}" class="add-to-cart">Dodaj do koszyka</a>
+        <button th:if="${admin}" th:href="@{/book/update/{id}(id=${book.id})}" button class="update">Update</button>
+        <button th:if="${admin}" th:href="@{/book/delete/{id}(id=${book.id})}" button class="delete">Delete</button>
+        <button th:if="${logged}" th:href="@{/cart/add/{id}(id=${book.id})}" button class="add-to-cart">Dodaj do koszyka</button>
     </div>
 </div>
 </body>

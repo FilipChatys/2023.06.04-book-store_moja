@@ -38,7 +38,6 @@ public class CartServiceImpl implements ICartService {
         }
         Book book = bookBox.get();
         Cart cart = this.sessionData.getCart();
-        //TODO zamiana na stream
         for(OrderPosition orderPosition : cart.getPositions()) {
             if(orderPosition.getBook().getId() == id) {
                 if(orderPosition.getQuantity() < book.getQuantity()) {

@@ -31,7 +31,7 @@ public class UserValidator {
     }
 
     public static void validatePassword(String password) {
-        String regex = "^.{5,}$";
+        String regex = "^(?=.*[A-Z])(?=.*\\d)(?=.*[-_!@#$%^&*()+=\\[\\]{};:,.?]).{5,}$";
         if(!password.matches(regex)) {
             throw new UserValidationException();
         }

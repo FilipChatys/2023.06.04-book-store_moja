@@ -14,9 +14,11 @@
     <input type="hidden" th:value="${parametrCos}" name="cos">
     <input type="text" class="input" placeholder="Tytuł" id="title" th:field="*{bookModel.title}">
     <input type="text" class="input" placeholder="Autor" id="author" th:field="*{bookModel.author}">
-    <input type="text" class="input" placeholder="Cena" id="price" th:field="*{bookModel.price}">
-    <input type="text" class="input" placeholder="Ilość" id="quantity" th:field="*{bookModel.quantity}">
+    <input type="text" class="input" placeholder="Cena" id="price" value="" >
+      Cena w formacie 00.00
+    <input type="text" class="input" placeholder="Ilość" id="quantity" value="">
     <input type="text" class="input" placeholder="ISBN" id="isbn" th:field="*{bookModel.isbn}">
+      ISBN w formacie (978,979)-(00-99)-(000-999)-(0000-9999)-(0-9)
     <input type="submit" value="Dodaj" class="button">
   </form>
 </div>
